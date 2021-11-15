@@ -1,23 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/application.js"></script>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+    <title>Shopping Cart</title>
   </head>
-  <body>
 
+  <body>
+    <div class="container">
+      <h1>Shopping Cart</h1>
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Sub Totals</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="item">Milk</td>
+                <td class="price">£1.00</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Bread</td>
+                <td class="price">£1.80</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Eggs</td>
+                <td class="price">£2.00</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Bananas</td>
+                <td class="price">£1.50</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Apples</td>
+                <td class="price">£1.30</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Pears</td>
+                <td class="price">£2.10</td>
+                <td class="quantity"><input type="number" value="0"></td>
+                <td class="subTotal"></td>
+                <td><button class="btn btn-sm remove">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <form class="col-12" id="addItem">
+          <input name="name" type="text" placeholder="Item Name" required/>
+          <input name="price" type="number" placeholder="Price"/>
+          <button class="btn btn-sm">add</button>
+        </form>
+
+        <div class="col-12">
+          <h2>Total Price: £ <span id="total"></span></h2>
+        </div>
+
+      </div>
+    </div>
+    
   </body>
+
 </html>
