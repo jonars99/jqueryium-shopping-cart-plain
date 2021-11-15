@@ -1,0 +1,25 @@
+.btn, h1, h2 {
+  font-weight: 600;
+}
+
+h1 {
+  margin-left: -10px;
+  margin-top: 50px;
+}
+
+h2 {
+  margin-right: 10px;
+}
+
+table {
+  padding-top: 10px;
+}
+
+th, td {
+  width: 20%;
+}
+
+form input {
+  margin-right: 35px;
+}
+

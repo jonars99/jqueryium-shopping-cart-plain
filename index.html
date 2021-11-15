@@ -23,11 +23,12 @@
         <div class="col-12">
           <table class="table table-responsive">
             <thead>
-              <tr>
+              <tr class="success">
                 <th scope="col">Item</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Sub Totals</th>
+                <th scope="col" class="text-center">Sub Totals</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
@@ -35,43 +36,43 @@
                 <td class="item">Milk</td>
                 <td class="price">£1.00</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
               <tr>
                 <td class="item">Bread</td>
                 <td class="price">£1.80</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
               <tr>
                 <td class="item">Eggs</td>
                 <td class="price">£2.00</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
               <tr>
                 <td class="item">Bananas</td>
                 <td class="price">£1.50</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
               <tr>
                 <td class="item">Apples</td>
                 <td class="price">£1.30</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
               <tr>
                 <td class="item">Pears</td>
                 <td class="price">£2.10</td>
                 <td class="quantity"><input type="number" value="0" min="0"></td>
-                <td class="subTotal"></td>
-                <td><button class="btn btn-sm remove">Remove</button></td>
+                <td class="subTotal text-center"></td>
+                <td><button class="btn btn-sm btn-danger remove">Remove</button></td>
               </tr>
             </tbody>
           </table>
@@ -80,11 +81,11 @@
         <form class="col-12" id="addItem">
           <input name="itemName" type="text" placeholder="Item Name" required/>
           <input name="price" type="number" min="0.01" step=".01" placeholder="Price"/>
-          <button class="btn btn-sm">add</button>
+          <button class="btn btn-sm btn-success">Add Item</button>
         </form>
 
         <div class="col-12">
-          <h2>Total Price: £ <span id="cartTotal"></span></h2>
+          <h2 class="text-right">Total Price: £ <span id="cartTotal"></span></h2>
         </div>
 
       </div>

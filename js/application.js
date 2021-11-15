@@ -55,8 +55,8 @@ $(document).ready(function () {
       '<td class="item">' + item + '</td>' +
       '<td class="price">£' + price + '</td>' +
       '<td class="quantity"><input type="number" value="0" min="0"></td>' +
-      '<td class="subTotal"></td>' +
-      '<td><button class="btn btn-sm remove">Remove</button></td>' +
+      '<td class="subTotal text-center"></td>' +
+      '<td><button class="btn btn-sm btn-danger remove">Remove</button></td>' +
       '</tr>'
     );
 
