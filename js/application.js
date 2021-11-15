@@ -49,7 +49,7 @@ $(document).ready(function () {
   $('#addItem').on('submit', function(event) {
     event.preventDefault();
     var item = $(this).children('[name=itemName]').val();
-    var price = $(this).children('[name=price]').val();
+    var price = parseFloat($(this).children('[name=price]').val()).toFixed(2);
 
     $('tbody').append('<tr>' +
       '<td class="item">' + item + '</td>' +
