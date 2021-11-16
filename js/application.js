@@ -1,16 +1,21 @@
-
 var calcSubTotal = function (element) {
   var itemPrice = $(element).find('.price').text().substring(1);
   var itemQuantity = parseFloat($(element).find('.quantity input').val());
+  if (isNaN(itemQuantity)) {
+    itemQuantity = 0;
+  }
   var subTotal = itemPrice * itemQuantity;
   return subTotal;
 };
 
 var updateSubTotal = function (element) {
+  var prices = [];
   $('tbody tr').each(function (index, element) {
-    var subTotal = calcSubTotal(element).toFixed(2);
+    var subTotal = parseFloat(calcSubTotal(element).toFixed(2));
+    prices.push(subTotal);
     $(element).children('.subTotal').html('£' + subTotal);
   });
+  return prices;
 };
 
 var sum = function (total, num) {
@@ -18,15 +23,7 @@ var sum = function (total, num) {
 };
 
 var updateCartTotal = function () {
-  updateSubTotal();
-  var prices = [];
-  
-  $('tbody tr').each(function (index, element) {
-    var price = calcSubTotal(element);
-    prices.push(price);
-  });
-
-  var cartTotal = prices.reduce(sum).toFixed(2);
+  var cartTotal = updateSubTotal().reduce(sum).toFixed(2);
   $('#cartTotal').html(cartTotal);
 };
 
@@ -61,6 +58,8 @@ $(document).ready(function () {
     );
 
     updateCartTotal();
+    $(this).children('[name=itemName]').val('');
+    $(this).children('[name=price]').val('');
 
   });
 
