@@ -11,10 +11,11 @@ var calcSubTotal = function (element) {
 var updateSubTotal = function (element) {
   var prices = [];
   $('tbody tr').each(function (index, element) {
-    var subTotal = parseFloat(calcSubTotal(element).toFixed(2));
+    var subTotal = parseFloat(calcSubTotal(element));
     prices.push(subTotal);
-    $(element).children('.subTotal').html('£' + subTotal);
+    $(element).children('.subTotal').html('£' + subTotal.toFixed(2));
   });
+  console.log(prices);
   return prices;
 };
 
